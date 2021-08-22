@@ -1,0 +1,16 @@
+{
+    "name": "zearkiatos/symfony-employment-exchange-web",
+    "description": "It is a Symfony 🎶 project for employment exchange for understand symfony framework and improvement PHP 🐘 software development",
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Pedro Capriles",
+            "email": "caprilespe@outlook.com"
+        }
+    ],
+    "require": {}
+}
