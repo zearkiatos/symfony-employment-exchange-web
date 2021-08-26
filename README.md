@@ -2,6 +2,8 @@
 
 It is a Symfony 🎶 project for employment exchange for understand symfony framework and improvement PHP 🐘 software development
 
+![Github](https://github.com/zearkiatos/symfony-employment-exchange-web/actions/workflows/action.yml/badge.svg)
+
 ## Some important commands
  `php bin/console make:entity` => It is a symfony 🎶 command for create your entities
 
