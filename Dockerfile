@@ -9,12 +9,12 @@ RUN wget https://get.symfony.com/cli/installer -O - | bash && \
     mv /root/.symfony/bin/symfony /usr/local/bin/symfony
 
 RUN apk update && apk upgrade
-RUN docker-php-ext-install mysqli
+RUN docker-php-ext-install pdo_mysql
     
 RUN symfony server:ca:install
 
 EXPOSE 8000
 
-# RUN php bin/console make:migration
-
 CMD symfony server:start --allow-http --no-tls --port=8000
+
+ENTRYPOINT ["sh", "./docker/entrypoint.sh"]

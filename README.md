@@ -10,3 +10,5 @@ It is a Symfony 🎶 project for employment exchange for understand symfony fram
   `php bin/console make:migration` => We can execute this command when we want to migrate the structure and the data.
 
   Both execution generate the same result
+
+  `php bin/console doctrine:migrations:migrate` => Import data to the data base

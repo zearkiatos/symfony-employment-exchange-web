@@ -32,6 +32,12 @@ class Offer
      */
     private $applicants = [];
 
+    /**
+     * @ORM\ManyToOne(targetEntity=Company::class, inversedBy="offers")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $owner;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -69,6 +75,18 @@ class Offer
     public function setApplicants(?array $applicants): self
     {
         $this->applicants = $applicants;
+
+        return $this;
+    }
+
+    public function getOwner(): ?Company
+    {
+        return $this->owner;
+    }
+
+    public function setOwner(?Company $owner): self
+    {
+        $this->owner = $owner;
 
         return $this;
     }

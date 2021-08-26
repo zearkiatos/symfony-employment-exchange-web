@@ -22,10 +22,13 @@ services:
     container_name: symfony-employment-exchange-web
     volumes: 
       - ".:/app"
+    restart: on-failure
     ports:
       - "8001:8000"
     tty: true
     depends_on: 
+      - mysql
+    links: 
       - mysql
     networks:
       employmentnetwork:
