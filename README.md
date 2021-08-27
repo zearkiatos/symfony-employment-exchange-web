@@ -3,6 +3,7 @@
 It is a Symfony 🎶 project for employment exchange for understand symfony framework and improvement PHP 🐘 software development
 
 ![Github](https://github.com/zearkiatos/symfony-employment-exchange-web/actions/workflows/action.yml/badge.svg)
+![GitlabCI](https://gitlab.com/caprilespe/symfony-employment-exchange-web/badges/develop/pipeline.svg)
 
 ## Some important commands
  `php bin/console make:entity` => It is a symfony 🎶 command for create your entities
@@ -14,3 +15,5 @@ It is a Symfony 🎶 project for employment exchange for understand symfony fram
   Both execution generate the same result
 
   `php bin/console doctrine:migrations:migrate` => Import data to the data base
+
+  `php bin/console make:controller it is a command for create a controller`

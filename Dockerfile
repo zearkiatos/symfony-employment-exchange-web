@@ -13,8 +13,8 @@ RUN docker-php-ext-install pdo_mysql
     
 RUN symfony server:ca:install
 
-EXPOSE 8000
+RUN composer dump
 
-CMD symfony server:start --allow-http --no-tls --port=8000
+EXPOSE 8000
 
 ENTRYPOINT ["sh", "./docker/entrypoint.sh"]
