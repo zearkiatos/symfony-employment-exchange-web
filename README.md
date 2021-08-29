@@ -19,3 +19,9 @@ It is a Symfony 🎶 project for employment exchange for understand symfony fram
   `php bin/console make:controller it is a command for create a controller`
 
   `php bin/console make:form this command is for create a new webform`
+
+  `php bin/console make:user create a class user fr the authentication`
+
+  `php bin/console make:auth create form auth for login`
+
+  `php bin/console security:encode-password admin create a user password`

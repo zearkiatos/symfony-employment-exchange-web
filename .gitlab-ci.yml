@@ -12,7 +12,7 @@ before_script:
     - apk add nginx
     - apk add php-cli
     - apk add php php-fpm php-opcache php-xml php-dom php-xmlwriter php-tokenizer
-    - apk add php-openssl php-json php-phar php-iconv php-mbstring ext-ctype ext-pdo 
+    - apk add php-openssl php-json php-phar php-iconv php-mbstring php-ctype php-pdo 
     - find / -name php -type f
     - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
     - HASH="$(wget -q -O - https://composer.github.io/installer.sig)"

@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use App\Repository\CompanyRepository;
+use ArrayAccess;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
@@ -10,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
 /**
  * @ORM\Entity(repositoryClass=CompanyRepository::class)
  */
-class Company
+class Company implements ArrayAccess
 {
     /**
      * @ORM\Id
@@ -33,6 +34,12 @@ class Company
      * @ORM\OneToMany(targetEntity=Offer::class, mappedBy="owner")
      */
     private $offers;
+
+    /**
+     * @ORM\OneToOne(targetEntity=User::class, cascade={"persist", "remove"})
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $owner;
 
     public function __construct()
     {
@@ -96,5 +103,33 @@ class Company
         }
 
         return $this;
+    }
+
+    public function getOwner(): ?User
+    {
+        return $this->owner;
+    }
+
+    public function setOwner(User $owner): self
+    {
+        $this->owner = $owner;
+
+        return $this;
+    }
+
+    public function offsetExists($offset) {
+        return isset($this->$offset);
+    }
+
+    public function offsetSet($offset, $value) {
+        $this->$offset = $value;
+    }
+
+    public function offsetGet($offset) {
+        return $this->$offset;
+    }
+
+    public function offsetUnset($offset) {
+        $this->$offset = null;
     }
 }
