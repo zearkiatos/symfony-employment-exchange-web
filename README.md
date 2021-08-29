@@ -17,3 +17,5 @@ It is a Symfony 🎶 project for employment exchange for understand symfony fram
   `php bin/console doctrine:migrations:migrate` => Import data to the data base
 
   `php bin/console make:controller it is a command for create a controller`
+
+  `php bin/console make:form this command is for create a new webform`

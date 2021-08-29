@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello CompanyController!{% endblock %}
+{% block title %}Registry Companies{% endblock %}
 
 {% block body %}
 <style>
@@ -9,12 +9,16 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+    <h1>Registries Companies 🏢</h1>
 
-    This friendly message is coming from:
+    {% if companies|length > 0 %}
     <ul>
-        <li>Your controller at <code><a href="{{ '/Applications/Documentos/Cursos/Platzi/Symfony/symfony-employment-exchange-web/app/Controller/CompanyController.php'|file_link(0) }}">app/Controller/CompanyController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/Applications/Documentos/Cursos/Platzi/Symfony/symfony-employment-exchange-web/templates/company/index.html.twig'|file_link(0) }}">templates/company/index.html.twig</a></code></li>
+        {% for company in companies %}
+        <li>{{company.name}} - {{company.email}}</li>
+        {% endfor %}
     </ul>
+    {% else %}
+        <p>There aren't companies yet</p>
+    {% endif %}
 </div>
 {% endblock %}
