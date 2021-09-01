@@ -33,7 +33,6 @@ install-dependencies:
   stage: install
   script:
     - composer dump
-    - composer update
     - composer install
   artifacts:
     expire_in: 1hr

@@ -90,4 +90,8 @@ class Offer
 
         return $this;
     }
+
+    public function addApplicant(Applicant $applicant) {
+        array_push($this->applicants, $applicant);
+    }
 }

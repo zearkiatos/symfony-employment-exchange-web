@@ -27,3 +27,7 @@ It is a Symfony 🎶 project for employment exchange for understand symfony fram
   `php bin/console security:encode-password admin create a user password`
 
   `php bin/console make:crud Let you to create a process create read update and delete for a entity`
+
+  `php bin/console make:registration-form Command to create a webform for registry automatic`
+
+  `php bin/console debug:router  show the routes`
