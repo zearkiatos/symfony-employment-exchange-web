@@ -10,9 +10,9 @@ before_script:
     - apk upgrade
     - apk add wget
     - apk add nginx
-    - apk add php-cli
-    - apk add php php-fpm php-opcache php-xml php-dom php-xmlwriter php-tokenizer
-    - apk add php-openssl php-json php-phar php-iconv php-mbstring php-ctype php-pdo 
+    - apk add php8-cli
+    - apk add php php8-fpm php8-opcache php8-xml php8-dom php8-xmlwriter php8-tokenizer
+    - apk add php8-openssl php8-json php8-phar php8-iconv php8-mbstring php8-ctype php8-pdo 
     - find / -name php -type f
     - php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
     - HASH="$(wget -q -O - https://composer.github.io/installer.sig)"
